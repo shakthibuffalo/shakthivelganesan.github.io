@@ -34,8 +34,41 @@
   </nav>
 
   <!-- Sections -->
-  <section id="about" class="min-h-screen flex items-center justify-center px-6 pt-20">
-    <h2 class="text-4xl font-semibold">About Me</h2>
+  <<section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <!-- Center Text -->
+    <div class="z-20 text-center">
+      <h1 class="text-5xl font-bold">Shakthivel Ganesan</h1>
+      <p class="text-lg mt-4 text-gray-300">Data Scientist | Creator | Explorer</p>
+    </div>
+  
+    <!-- Image Bubbles -->
+    <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none">
+      <img src="images/img1.jpg" class="bubble top-10 left-10" />
+      <img src="images/img2.jpg" class="bubble top-32 right-20" />
+      <img src="images/img3.jpg" class="bubble bottom-20 left-20" />
+      <img src="images/img4.jpg" class="bubble bottom-10 right-10" />
+      <img src="images/img5.jpg" class="bubble top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 w-96 h-96" />
+    </div>
+  
+    <!-- Bubble Style -->
+    <style>
+      .bubble {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 9999px;
+        opacity: 0.3;
+        filter: blur(2px);
+        backdrop-filter: blur(5px);
+        transition: transform 0.3s ease;
+      }
+  
+      .bubble:hover {
+        transform: scale(1.1);
+        opacity: 0.5;
+      }
+    </style>
   </section>
 
   <section id="skills" class="min-h-screen flex items-center justify-center px-6">
