@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shakthivel Ganesan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello, I'm Shakthivel!</h1>
-  <p>Welcome to my personal site. I'm a data scientist and musician.</p>
+<body class="dark bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Shakthivel</h1>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#experience" class="hover:text-blue-400">Experience</a></li>
+        <li><a href="#education" class="hover:text-blue-400">Education</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#links" class="hover:text-blue-400">Links</a></li>
+        <li><a href="#youtube" class="hover:text-blue-400">YouTube</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="about" class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <h2 class="text-4xl font-semibold">About Me</h2>
+  </section>
+
+  <section id="skills" class="min-h-screen flex items-center justify-center px-6">
+    <h2 class="text-4xl font-semibold">Skills & Tech Stack</h2>
+  </section>
+
+  <section id="experience" class="min-h-screen flex items-center justify-center px-6">
+    <h2 class="text-4xl font-semibold">Work Experience</h2>
+  </section>
+
+  <section id="education" class="min-h-screen flex items-center justify-center px-6">
+    <h2 class="text-4xl font-semibold">Education</h2>
+  </section>
+
+  <section id="projects" class="min-h-screen flex items-center justify-center px-6">
+    <h2 class="text-4xl font-semibold">Projects</h2>
+  </section>
+
+  <section id="links" class="min-h-screen flex items-center justify-center px-6">
+    <h2 class="text-4xl font-semibold">Links & Contact</h2>
+  </section>
+
+  <section id="youtube" class="min-h-screen flex items-center justify-center px-6 pb-12">
+    <h2 class="text-4xl font-semibold">YouTube & Music</h2>
+  </section>
 </body>
 </html>
