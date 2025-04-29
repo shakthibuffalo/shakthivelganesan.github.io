@@ -17,6 +17,8 @@
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 </head>
 <body class="dark bg-gray-900 text-white font-sans">
   <!-- Navigation -->
@@ -37,6 +39,8 @@
 
   <!-- Sections -->
   <<section id="about" class="panel relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <div id="vanta-bg" class="absolute top-0 left-0 w-full h-full -z-10"></div> <!-- Background div -->
+
     <!-- Center Text -->
     <div class="z-20 text-center">
       <h1 class="text-5xl font-bold">Shakthivel Ganesan</h1>
@@ -211,5 +215,21 @@
       });
     });
   </script>
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",  // <-- this matches your new div ID
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x9ae17a,
+      backgroundColor: 0x231250,
+      points: 11.00,
+      maxDistance: 17.00
+    })
+    </script>
 </body>
 </html>
