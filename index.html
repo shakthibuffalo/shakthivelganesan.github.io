@@ -15,6 +15,8 @@
       scroll-behavior: smooth;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body class="dark bg-gray-900 text-white font-sans">
   <!-- Navigation -->
@@ -34,7 +36,7 @@
   </nav>
 
   <!-- Sections -->
-  <<section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+  <<section id="about" class="panel relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
     <!-- Center Text -->
     <div class="z-20 text-center">
       <h1 class="text-5xl font-bold">Shakthivel Ganesan</h1>
@@ -72,7 +74,7 @@
     </style>
   </section>
 
-  <section id="skills" class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+  <section id="skills" class="panel min-h-screen flex flex-col items-center justify-center px-6 pt-20">
     <h2 class="text-4xl font-semibold mb-12">Skills & Tech Stack</h2>
   
     <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
@@ -179,24 +181,35 @@
     </div>
   </section>
 
-  <section id="experience" class="min-h-screen flex items-center justify-center px-6">
+  <section id="experience" class="panel min-h-screen flex items-center justify-center px-6">
     <h2 class="text-4xl font-semibold">Work Experience</h2>
   </section>
 
-  <section id="education" class="min-h-screen flex items-center justify-center px-6">
+  <section id="education" class="panel min-h-screen flex items-center justify-center px-6">
     <h2 class="text-4xl font-semibold">Education</h2>
   </section>
 
-  <section id="projects" class="min-h-screen flex items-center justify-center px-6">
+  <section id="projects" class="panel min-h-screen flex items-center justify-center px-6">
     <h2 class="text-4xl font-semibold">Projects</h2>
   </section>
 
-  <section id="links" class="min-h-screen flex items-center justify-center px-6">
+  <section id="links" class="panel min-h-screen flex items-center justify-center px-6">
     <h2 class="text-4xl font-semibold">Links & Contact</h2>
   </section>
 
-  <section id="youtube" class="min-h-screen flex items-center justify-center px-6 pb-12">
+  <section id="youtube" class="panel min-h-screen flex items-center justify-center px-6 pb-12">
     <h2 class="text-4xl font-semibold">YouTube & Music</h2>
   </section>
+
+  <script>
+    gsap.utils.toArray(".panel").forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        pin: true,
+        pinSpacing: false
+      });
+    });
+  </script>
 </body>
 </html>
