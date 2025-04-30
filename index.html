@@ -233,5 +233,21 @@
         spacing: 20.00
     })
     </script>
+    <script>
+        const vantaDiv = document.getElementById("vanta-bg");
+      
+        window.addEventListener("scroll", () => {
+          const about = document.getElementById("about");
+          const aboutHeight = about.offsetHeight;
+          const scrollY = window.scrollY;
+      
+          // If user scrolls past the About section, fade out Vanta
+          if (scrollY > aboutHeight - 100) {
+            vantaDiv.style.opacity = "0";
+          } else {
+            vantaDiv.style.opacity = "1";
+          }
+        });
+      </script>
 </body>
 </html>
